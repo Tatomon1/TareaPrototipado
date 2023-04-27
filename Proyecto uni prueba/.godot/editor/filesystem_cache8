@@ -1,0 +1,10 @@
+2a60927148abd1d33b818b535e306557
+::res://::1682637748
+icon.svg::CompressedTexture2D::91389714969089229::1682637688::1682637751::1::::<><>::
+Mundo.gd::GDScript::-1::1682637688::0::1::::<>Node2D<>::
+n4sc37a.jpg::CompressedTexture2D::6990241375917098924::1682637688::1682637751::1::::<><>::
+node_2d.tscn::PackedScene::6966672727385865298::1682637688::0::1::::<><>::uid://bkjf7uflwby0<>res://Mundo.gd<>uid://b64bwcqgq3grx<>uid://bolhmjxjoo5qn
+Personaje.gd::GDScript::-1::1682637688::0::1::::<>CharacterBody2D<>::
+personaje.tscn::PackedScene::4622241925857185553::1682637688::0::1::::<><>::uid://bkjf7uflwby0<>res://Personaje.gd
+::res://Assets/::1682637688
+SpriteSolo.png::CompressedTexture2D::4847176727248325109::1682637688::1682637751::1::::<><>::

@@ -58,7 +58,7 @@ func Doblesalto():
 
 
 func MovimientoPj(delta):
-	var direction = Input.get_axis("ui_left", "MoverDerecha")
+	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
 		friccion = 0
