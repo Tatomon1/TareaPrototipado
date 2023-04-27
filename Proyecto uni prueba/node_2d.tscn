@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://c6iyc11abp2oc"]
+
+[ext_resource type="Texture2D" uid="uid://bkjf7uflwby0" path="res://icon.svg" id="1_aoqih"]
+[ext_resource type="Script" path="res://Mundo.gd" id="1_gdlj5"]
+[ext_resource type="PackedScene" uid="uid://b64bwcqgq3grx" path="res://personaje.tscn" id="2_twy03"]
+[ext_resource type="PackedScene" uid="uid://bolhmjxjoo5qn" path="res://personaje_vista_cen.tscn" id="4_afi15"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_hgqv7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_674qa"]
+size = Vector2(127.726, 127.461)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmht0"]
+size = Vector2(1199, 20)
+
+[sub_resource type="CurveTexture" id="CurveTexture_htmac"]
+width = 32
+texture_mode = 1
+
+[node name="mundo" type="Node2D"]
+script = ExtResource("1_gdlj5")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(1039, 481)
+physics_material_override = SubResource("PhysicsMaterial_hgqv7")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("1_aoqih")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-0.137024, -0.730438)
+shape = SubResource("RectangleShape2D_674qa")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(363, 633)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(217.5, 0)
+shape = SubResource("RectangleShape2D_qmht0")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(219, 0)
+scale = Vector2(36.5625, 19)
+texture = SubResource("CurveTexture_htmac")
+
+[node name="Node2D" parent="." instance=ExtResource("2_twy03")]
+visible = false
+position = Vector2(176, 465)
+
+[node name="PersonajeVistaCen" parent="." instance=ExtResource("4_afi15")]
+position = Vector2(108, 551)
