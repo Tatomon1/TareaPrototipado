@@ -40,12 +40,12 @@ func _physics_process(delta):
 
 #Funciones:
 func Planear():
-	if Input.is_action_pressed("Planear"):
+	if Input.is_action_pressed("Planear"):  #planear es con la barra espaciadora
 		if velocity.y > 0 and !is_on_floor():
 			velocity.y = 30 
 
 func Doblesalto():
-		if Input.is_action_just_pressed("ui_up") and Doble_salto < 2:
+		if Input.is_action_just_pressed("ui_up") and Doble_salto < 2: 
 			velocity.y = JUMP_VELOCITY
 			Doble_salto += 1
 
